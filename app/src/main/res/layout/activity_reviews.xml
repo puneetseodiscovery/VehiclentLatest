@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weel_bg"
+    tools:context=".ReviewActivity.ReviewsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_pastdetails"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/reviews"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_pastdetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_userprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:src="@drawable/user_profile" />
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_userprofile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp8"
+                        android:text="RICHARD A"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp22" />
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_username"
+                        android:layout_centerHorizontal="true"
+                        android:numStars="5"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:stepSize="1.0"
+                        android:theme="@style/RatingBar" />
+
+
+                    <EditText
+                        android:id="@+id/edit_carcare"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp200"
+                        android:layout_below="@+id/ratingbar"
+                        android:layout_marginLeft="@dimen/margin_dp35"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:layout_marginRight="@dimen/margin_dp35"
+                        android:background="@drawable/custom_review_bg"
+                        android:gravity="start"
+                        android:hint="Write your reviews"
+                        android:inputType="textMultiLine"
+                        android:maxLines="50"
+                        android:paddingLeft="@dimen/padding_dp10"
+                        android:paddingTop="@dimen/margin_dp12"
+                        android:paddingRight="@dimen/padding_dp10"
+                        android:paddingBottom="@dimen/padding_dp12"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/margin_dp16" />
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp45"
+                        android:layout_below="@+id/edit_carcare"
+                        android:layout_alignStart="@+id/edit_carcare"
+                        android:layout_alignEnd="@+id/edit_carcare"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:background="@drawable/custom_signin_bg"
+                        android:text="@string/submit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textsize_sp18"
+                        android:layout_marginBottom="@dimen/margin_dp35"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

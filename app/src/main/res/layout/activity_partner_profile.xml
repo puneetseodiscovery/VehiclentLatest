@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weel_bg"
+    tools:context=".partnerProfileActivity.PartnerProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_partnerprofile"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_partner_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/partner_profile"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_partnerprofile">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relative_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_partner"
+                        android:layout_width="@dimen/margin_dp150"
+                        android:layout_height="@dimen/margin_dp150"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp40"
+                        android:src="@drawable/user_profile" />
+
+                    <View
+                        android:id="@+id/view01"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/img_partner"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorBlack" />
+
+                    <ImageView
+                        android:id="@+id/img_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view01"
+                        android:layout_marginLeft="@dimen/margin_dp80"
+                        android:layout_marginTop="@dimen/margin_dp7"
+                        android:src="@drawable/phone_r" />
+
+                    <ImageView
+                        android:id="@+id/img_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view01"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/margin_dp7"
+                        android:layout_marginRight="@dimen/margin_dp80"
+                        android:src="@drawable/msg_g" />
+
+                    <View
+                        android:id="@+id/view02"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/img_call"
+                        android:layout_marginTop="@dimen/margin_dp7"
+                        android:background="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/tv_partnername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view02"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:text="RICHARD A"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp22" />
+
+                    <TextView
+                        android:id="@+id/tv_partneraddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_partnername"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:text="123 Main Stanytown, USA"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp18" />
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_partneraddress"
+                        android:layout_centerHorizontal="true"
+                        android:numStars="5"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:stepSize="1.0"
+                        android:theme="@style/RatingBar" />
+
+                    <TextView
+                        android:id="@+id/tv_totalrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingbar"
+                        android:layout_centerInParent="true"
+                        android:text="Rate:- $20/Hour"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp18" />
+
+                    <TextView
+                        android:id="@+id/tv_duraton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_totalrating"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:text="Minimum Duration :- 2Hours"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_duraton"
+                        android:layout_marginTop="@dimen/margin_dp45"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/tv_track"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_duraton"
+                            android:layout_marginLeft="@dimen/margin_dp40"
+                            android:layout_marginTop="@dimen/margin_dp45"
+                            android:layout_marginRight="@dimen/margin_dp20"
+                            android:layout_marginBottom="@dimen/margin_dp45"
+                            android:background="@drawable/custom_login_bg"
+                            android:text="track"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textsize_sp18" />
+
+                        <Button
+                            android:id="@+id/tv_payment"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_duraton"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/margin_dp45"
+                            android:layout_marginRight="@dimen/margin_dp40"
+                            android:layout_marginBottom="@dimen/margin_dp25"
+                            android:background="@drawable/custom_signin_bg"
+                            android:text="Payment"
+                            android:layout_marginLeft="@dimen/margin_dp20"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textsize_sp18" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

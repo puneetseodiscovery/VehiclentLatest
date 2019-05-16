@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pastJobDetails.PastJobDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_pastdetails"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_pastjob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_pastjob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/post_job_details"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_pastdetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/weel_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_userprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:src="@drawable/user_profile" />
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_userprofile"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:text="RICHARD A"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp22" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_username"
+                            android:layout_marginTop="@dimen/margin_dp20"
+                            android:background="@color/colorBlack" />
+
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/name"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:layout_marginLeft="@dimen/margin_dp100"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:layout_toRightOf="@+id/name"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="RICHARD A"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_user_name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view2"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/useremail"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_user_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view2"
+                            android:layout_alignLeft="@+id/tv_user_name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:layout_toRightOf="@+id/name"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="rich12@gmail.com"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_user_email"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+
+                        <TextView
+                            android:id="@+id/mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view3"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/usermobile"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_user_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view3"
+                            android:layout_alignLeft="@+id/tv_user_name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp15"
+                            android:layout_toRightOf="@+id/name"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="9816255767"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/mobile"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view4"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/useraddress"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_user_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view4"
+                            android:layout_alignLeft="@+id/tv_user_name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:layout_toRightOf="@+id/name"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="2 King street south USA"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_user_address"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+                        <TextView
+                            android:id="@+id/payable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view5"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/payable_amount"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_payable_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view5"
+                            android:layout_alignLeft="@+id/tv_user_address"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp15"
+                            android:layout_toRightOf="@+id/tv_user_address"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="15$"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_payable_amount"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+
+                        <TextView
+                            android:id="@+id/jobdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view6"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/job_dete"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_jobdetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view6"
+                            android:layout_alignLeft="@+id/tv_user_address"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp15"
+                            android:layout_toRightOf="@+id/tv_user_address"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="26 April 2019"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_jobdetails"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:background="@color/colorBlack" />
+
+
+                        <TextView
+                            android:id="@+id/services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view7"
+                            android:layout_alignLeft="@+id/name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="@string/service"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view7"
+                            android:layout_alignLeft="@+id/tv_user_address"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp15"
+                            android:layout_toRightOf="@+id/tv_user_address"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="Car Care"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_services"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp25"
+                            android:background="@color/colorBlack" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weel_bg"
+    tools:context=".cardActivity.CardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_carcare"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Debit Card"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_carcare">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relative_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_visacard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:drawableTop="@drawable/visa"
+                        android:drawablePadding="@dimen/padding_dp8"
+                        android:text="Visa Card"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <TextView
+                        android:id="@+id/tv_mastercard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:layout_toRightOf="@+id/tv_visacard"
+                        android:drawableTop="@drawable/master"
+                        android:drawablePadding="@dimen/padding_dp10"
+                        android:text="Master Card"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_mastercard"
+                        android:layout_marginLeft="@dimen/margin_dp15"
+                        android:layout_marginTop="@dimen/margin_dp50"
+                        android:layout_marginRight="@dimen/margin_dp15"
+                        android:layout_marginBottom="@dimen/margin_dp30"
+                        android:background="@drawable/custom_debit_bg">
+
+                        <TextView
+                            android:id="@+id/tv_cardnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_dp25"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="Card Number"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <EditText
+                            android:id="@+id/edit_cardNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp40"
+                            android:layout_below="@+id/tv_cardnumber"
+                            android:layout_marginLeft="@dimen/margin_dp10"
+                            android:layout_marginTop="@dimen/margin_dp8"
+                            android:layout_marginRight="@dimen/margin_dp10"
+                            android:background="@drawable/custom_white_edit_bg"
+                            android:hint="1111-1111-1111-1111"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/padding_dp12"
+                            android:paddingRight="@dimen/padding_dp12"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+
+                        <TextView
+                            android:id="@+id/tv_cardexpiredate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_cardNumber"
+                            android:layout_marginLeft="@dimen/margin_dp25"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:text="Expire Date"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <TextView
+                            android:id="@+id/tv_cardcvv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_cardNumber"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:layout_marginRight="@dimen/margin_dp60"
+                            android:text="CVV"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+
+                        <EditText
+                            android:id="@+id/edit_cardexpiredate"
+                            android:layout_width="@dimen/margin_dp130"
+                            android:layout_height="@dimen/margin_dp40"
+                            android:layout_below="@+id/tv_cardexpiredate"
+                            android:layout_alignLeft="@+id/edit_cardNumber"
+                            android:layout_marginTop="@dimen/margin_dp8"
+                            android:layout_marginRight="@dimen/margin_dp10"
+                            android:background="@drawable/custom_white_edit_bg"
+                            android:gravity="center"
+                            android:hint="06/06/2023"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/padding_dp12"
+                            android:paddingRight="@dimen/padding_dp12"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+
+                        <EditText
+                            android:id="@+id/edit_cardcvv"
+                            android:layout_width="@dimen/margin_dp130"
+                            android:layout_height="@dimen/margin_dp40"
+                            android:layout_below="@+id/tv_cardexpiredate"
+                            android:layout_alignEnd="@+id/edit_cardNumber"
+                            android:layout_marginTop="@dimen/margin_dp8"
+                            android:background="@drawable/custom_white_edit_bg"
+                            android:gravity="center"
+                            android:hint="023"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/padding_dp12"
+                            android:paddingRight="@dimen/padding_dp12"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+
+                        <TextView
+                            android:id="@+id/tv_cardholdername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_cardcvv"
+                            android:layout_marginLeft="@dimen/margin_dp25"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:text="Card Holder Name"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <EditText
+                            android:id="@+id/edit_cardname"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp40"
+                            android:layout_below="@+id/tv_cardholdername"
+                            android:layout_alignLeft="@+id/edit_cardNumber"
+                            android:layout_alignRight="@+id/edit_cardNumber"
+                            android:layout_marginTop="@dimen/margin_dp8"
+                            android:background="@drawable/custom_white_edit_bg"
+                            android:hint="Richard A"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/padding_dp12"
+                            android:paddingRight="@dimen/padding_dp12"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative_savecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp55"
+                            android:layout_below="@+id/edit_cardname"
+                            android:layout_alignLeft="@+id/edit_cardNumber"
+                            android:layout_alignRight="@+id/edit_cardNumber"
+                            android:layout_marginTop="@dimen/margin_dp15"
+                            android:background="@drawable/custom_save_card">
+
+
+                            <CheckBox
+                                android:id="@+id/checked"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_dp10"
+                                android:padding="@dimen/padding_dp5" />
+
+                            <TextView
+                                android:id="@+id/tv_iagree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/checked"
+                                android:text="Save this card for your next payment."
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/textsize_sp13" />
+
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_ok"
+                            android:layout_width="@dimen/margin_dp60"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_below="@+id/relative_savecard"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:background="@drawable/custom_login_bg"
+                            android:text="@string/ok"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textsize_sp18"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_verify"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_below="@+id/relative_savecard"
+                            android:layout_alignLeft="@+id/edit_cardNumber"
+                            android:layout_alignRight="@+id/edit_cardNumber"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp15"
+                            android:layout_marginBottom="@dimen/margin_dp20"
+                            android:background="@drawable/custom_login_bg"
+                            android:text="@string/ok"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textsize_sp18" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

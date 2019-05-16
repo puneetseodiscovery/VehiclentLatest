@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".carCareActivity.CarCareActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_carcare"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_carcare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_carcare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/car_care"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_carcare">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/img_applogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:src="@drawable/new_logo" />
+
+                    <EditText
+                        android:id="@+id/edit_carcare"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp220"
+                        android:layout_below="@+id/img_applogo"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp60"
+                        android:layout_marginRight="@dimen/margin_dp25"
+                        android:background="@drawable/custom_carcare_bg"
+                        android:gravity="start"
+                        android:hint="@string/please_write_your_problem"
+                        android:inputType="textMultiLine"
+                        android:maxLines="50"
+                        android:paddingLeft="@dimen/padding_dp10"
+                        android:paddingTop="@dimen/margin_dp12"
+                        android:paddingRight="@dimen/padding_dp10"
+                        android:paddingBottom="@dimen/padding_dp12"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/margin_dp16" />
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp45"
+                        android:layout_below="@+id/edit_carcare"
+                        android:layout_alignStart="@+id/edit_carcare"
+                        android:layout_alignEnd="@+id/edit_carcare"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:layout_marginBottom="@dimen/margin_dp25"
+                        android:background="@drawable/custom_details"
+                        android:text="@string/submit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textsize_sp18" />
+
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/avi"
+                        android:layout_width="@dimen/margin_dp60"
+                        android:layout_height="@dimen/margin_dp60"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        app:indicatorName="BallSpinFadeLoaderIndicator" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

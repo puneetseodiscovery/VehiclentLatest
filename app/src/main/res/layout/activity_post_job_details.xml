@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pastJobDetails.PastJobDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_pastdetails"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_pastjob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_pastjob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/post_job_details"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_pastdetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/weel_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_userprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:src="@drawable/user_profile" />
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_userprofile"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_dp25"
+                            android:text="RICHARD A"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize_sp22" />
+
+                        <View
+                            android:id="@+id/view0"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/tv_username"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view0"
+                            android:id="@+id/ll_name"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/name"
+                                android:layout_width="0dp"
+                                android:text="@string/name"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="RICHARD A"
+                                android:id="@+id/tv_user_name"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_name"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:id="@+id/ll_email"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/email"
+                                android:layout_width="0dp"
+                                android:text="@string/useremail"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="rich12@gmail.com"
+                                android:id="@+id/tv_user_email"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_email"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view2"
+                            android:id="@+id/ll_phone"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/mobile"
+                                android:layout_width="0dp"
+                                android:text="@string/usermobile"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="9816255767"
+                                android:id="@+id/tv_user_mobile"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_phone"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view3"
+                            android:id="@+id/ll_address"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/address"
+                                android:layout_width="0dp"
+                                android:text="@string/useraddress"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="2 King street south USA"
+                                android:id="@+id/tv_user_address"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_address"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view4"
+                            android:id="@+id/ll_payable"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/payable"
+                                android:layout_width="0dp"
+                                android:text="@string/payable_amount"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="15$"
+                                android:id="@+id/tv_payable_amount"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_payable"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view5"
+                            android:id="@+id/ll_job_date"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/jobdate"
+                                android:layout_width="0dp"
+                                android:text="@string/job_dete"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="26 April 2019"
+                                android:id="@+id/tv_jobdetails"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_job_date"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view6"
+                            android:id="@+id/ll_service"
+                            android:layout_marginLeft="@dimen/margin_dp30"
+                            android:layout_marginTop="@dimen/margin_dp10"
+                            android:layout_marginRight="@dimen/margin_dp30"
+                            android:weightSum="2">
+
+                            <TextView android:layout_height="wrap_content"
+                                android:id="@+id/services"
+                                android:layout_width="0dp"
+                                android:text="@string/service"
+                                android:textSize="15sp"
+                                android:layout_weight="1"/>
+
+                            <TextView android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="Car Care"
+                                android:id="@+id/tv_services"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:focusable="false"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_size_dp0.5"
+                            android:layout_below="@+id/ll_service"
+                            android:layout_marginTop="@dimen/margin_dp18"
+                            android:layout_marginBottom="@dimen/margin_dp10"
+                            android:background="@color/colorBlack" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

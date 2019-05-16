@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weel_bg"
+    tools:context=".paymnetSuccessful.PaymentSuccessfulActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_pastdetails"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <ImageView
+                android:id="@+id/img_back_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+
+            <TextView
+                android:id="@+id/tv_payment_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Payment Successful"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_pastdetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_userprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp80"
+                        android:src="@drawable/ticks" />
+
+                    <TextView
+                        android:id="@+id/tv_congratulations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_userprofile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp50"
+                        android:text="@string/successful"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp21" />
+
+                    <TextView
+                        android:id="@+id/tv_ordersucessfully"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_congratulations"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/margin_dp5"
+                        android:layout_marginLeft="@dimen/margin_dp5"
+                        android:text="@string/thankyou"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize_sp13" />
+
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp45"
+                        android:layout_below="@+id/tv_ordersucessfully"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp35"
+                        android:layout_marginRight="@dimen/margin_dp25"
+                        android:background="@drawable/custom_next_bg"
+                        android:text="@string/next"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textsize_sp18"
+                        android:layout_marginBottom="@dimen/margin_dp35"/>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
