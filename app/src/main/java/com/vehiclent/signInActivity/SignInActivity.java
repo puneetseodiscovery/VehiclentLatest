@@ -2,7 +2,6 @@ package com.vehiclent.signInActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,15 +13,16 @@ import com.vehiclent.R;
 import com.vehiclent.base.BaseClass;
 import com.vehiclent.fogotPassword.ForgotPassword;
 import com.vehiclent.mainActivity.HomeActivity;
-import com.vehiclent.responseModel.UserLoginResponseModel;
+import com.vehiclent.mainActivity.MainActivity;
+import com.vehiclent.responseModelClasses.SignInResponseModel;
 import com.vehiclent.signupActivity.SignUpActivity;
+import com.vehiclent.utils.CommonMethods;
 import com.vehiclent.utils.Utility;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SignInActivity extends BaseClass  {
-
+public class SignInActivity extends BaseClass implements ISignInActivity, View.OnClickListener {
 
     SignInActivity context;
 
@@ -41,10 +41,9 @@ public class SignInActivity extends BaseClass  {
     @BindView(R.id.edit_userpassword)
     EditText edit_userpassword;
 
-    IPLogin iPresenterLogin;
-
     ProgressDialog progressDialog;
-    int treatmentActivity;
+
+    IPSignIn ipSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,115 +52,97 @@ public class SignInActivity extends BaseClass  {
 
         context = SignInActivity.this;
         ButterKnife.bind(this);
+        ipSignIn=new PSignIn(this);
+        Initialization();
 
-        iPresenterLogin = new PLogin(this);
 
-        tv_forgotpassword = (TextView) findViewById(R.id.tv_forgotpassword);
-        signUpClick = (TextView) findViewById(R.id.signUpClick);
+    }
+
+    private void Initialization() {
 
         tv_forgotpassword.setTypeface(Utility.typeFaceForBoldText(this));
+        EventListner();
+    }
 
-        tv_forgotpassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignInActivity.this, ForgotPassword.class);
-                startActivity(intent);
-            }
-        });
+    private void EventListner() {
 
-        signUpClick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-       /* btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Utility.isNetworkConnected(context)) {
-                    if (edit_usereamil.getText().toString().length() > 0 && edit_userpassword.getText().toString().length() > 0) {
-
-
-                        if (Utility.validEmail(edit_usereamil.getText().toString().trim())) {
-
-                            progressDialog = Utility.showLoader(SignInActivity.this);
-                            iPresenterLogin.doLogin(edit_usereamil.getText().toString().trim(),
-                                    edit_userpassword.getText().toString().trim());
-
-                        } else {
-                            edit_usereamil.setError("Enter a valid email.");
-                            edit_usereamil.requestFocus();
-                        }
-                    } else {
-                        if (edit_usereamil.getText().toString().length() == 0 && edit_userpassword.getText().toString().length() == 0) {
-                            edit_usereamil.setError("Enter a valid email.");
-                            edit_userpassword.setError("Enter password");
-                            edit_usereamil.requestFocus();
-                        } else if (edit_userpassword.getText().toString().length() == 0) {
-                            edit_userpassword.setError("Enter password");
-                            edit_userpassword.requestFocus();
-                        } else if (edit_usereamil.getText().toString().length() == 0) {
-                            edit_usereamil.setError("Enter a valid email.");
-                            edit_usereamil.requestFocus();
-                        }
-                        //Toast.makeText(this, "Enter correct login details.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(context, "Check your internet connection !!!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-            }
-        });
-
+        tv_forgotpassword.setOnClickListener(this);
+        signUpClick.setOnClickListener(this);
+        btn_login.setOnClickListener(this);
     }
 
     @Override
-    public void onLoginResponseFromPresenter(int statusValue) {
+    public void onClick(View v) {
+        Intent intent=null;
 
-        Toast.makeText(this, "" + statusValue, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
-        startActivity(intent);
+        switch (v.getId()) {
+            case R.id.tv_forgotpassword:
+                 intent = new Intent(SignInActivity.this, ForgotPassword.class);
+                startActivity(intent);
+                break;
+            case R.id.signUpClick:
+                 intent = new Intent(SignInActivity.this, SignUpActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_login:
 
+               ValidationOnSignIn(); // validation on user login cradintials
 
+                break;
+
+        }
     }
 
-    @Override
-    public void onLoginSuccessFromPresenter(UserLoginResponseModel userLoginResponseModel) {
+    private void ValidationOnSignIn() {
 
+        if (Utility.isNetworkConnected(context)) {
 
-        progressDialog.dismiss();
-        if (treatmentActivity == 0) {
-            Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
-            startActivity(intent);
-            finish();
+             if (edit_usereamil.getText().toString().trim().isEmpty()) {
 
+                 edit_usereamil.setError("Please enter email");
+
+            } else if (!CommonMethods.isValidEmail(edit_usereamil.getText().toString())) {
+
+                 edit_usereamil.setError("Please enter valid email");
+
+            } else if (edit_userpassword.getText().toString().trim().isEmpty()) {
+
+                 edit_userpassword.setError("Please enter password");
+
+            } else {
+
+                progressDialog = Utility.showLoader(SignInActivity.this);
+                 ipSignIn.doSignIn(edit_usereamil.getText().toString().trim(), edit_userpassword.getText().toString().trim());
+            }
 
         } else {
-            onBackPressed();
-            finish();
+            Toast.makeText(context, "Check your internet connection !!!", Toast.LENGTH_SHORT).show();
+            return;
         }
+    }
+
+    @Override
+    public void onSignInResponseFromPresenter(int statusValue) {
+        progressDialog.dismiss();
+        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onSignInSuccessResponseFromPresenter(SignInResponseModel signInResponseModel) {
+        progressDialog.dismiss();
+        Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        Toast.makeText(this, "Login Sucessfully", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
-    public void onLoginFailedFromPresenter(String message) {
-        Toast.makeText(this, "" + message, Toast.LENGTH_SHORT).show();
-    //    progressDialog.dismiss();
+    public void onSignInFailedResponseFromPresenter(String message) {
 
-
-    }*/
     }
+
+
 }

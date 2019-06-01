@@ -1,4 +1,4 @@
-package com.vehiclent.retrofit;
+package com.vehiclent.retrofitCalls;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
