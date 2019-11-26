@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_servicesName"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Service Name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/margin_dp18" />
+
+        <com.tomer.fadingtextview.FadingTextView
+            android:id="@+id/fadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textsize_sp17"
+            android:textStyle="bold"
+            app:texts="@array/text"
+            app:timeout="600" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="@dimen/margin_dp60"
+            android:layout_height="@dimen/margin_dp60"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="BallSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+</RelativeLayout>

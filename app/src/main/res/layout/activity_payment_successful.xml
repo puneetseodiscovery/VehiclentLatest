@@ -57,13 +57,25 @@
                         android:layout_marginTop="@dimen/margin_dp80"
                         android:src="@drawable/ticks" />
 
+
                     <TextView
-                        android:id="@+id/tv_congratulations"
+                        android:id="@+id/tv_paymentsuccessful"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/img_userprofile"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="@dimen/margin_dp50"
+                        android:layout_marginTop="@dimen/margin_dp20"
+                        android:text=""
+                        android:textColor="@color/colorGreenText"
+                        android:textSize="@dimen/textsize_sp25" />
+
+                    <TextView
+                        android:id="@+id/tv_congratulations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_paymentsuccessful"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp30"
                         android:text="@string/successful"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/textsize_sp21" />

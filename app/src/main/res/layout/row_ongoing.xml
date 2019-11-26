@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_vehical"
+            android:layout_width="@dimen/margin_dp80"
+            android:layout_height="@dimen/margin_dp80"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp30"
+            android:src="@drawable/user_profile" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_jobstime"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:src="@drawable/arrow_next" />
+
+        <TextView
+            android:id="@+id/tv_jobsname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp28"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_toRightOf="@+id/img_vehical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_sp18" />
+
+        <TextView
+            android:id="@+id/tv_jobstime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_jobsname"
+            android:layout_alignLeft="@+id/tv_jobsname"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_toRightOf="@+id/img_vehical"
+            android:drawableLeft="@drawable/cl"
+            android:drawablePadding="@dimen/padding_dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_sp16" />
+
+        <TextView
+            android:id="@+id/tv_car_care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_jobstime"
+            android:layout_alignLeft="@+id/tv_jobsname"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_toRightOf="@+id/img_vehical"
+            android:drawableLeft="@drawable/tool"
+            android:drawablePadding="@dimen/padding_dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_sp16" />
+
+
+        <TextView
+            android:id="@+id/tv_car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_car_care"
+            android:layout_alignLeft="@+id/tv_jobsname"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_toRightOf="@+id/img_vehical"
+            android:drawablePadding="@dimen/padding_dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_car_model"
+            android:drawablePadding="@dimen/padding_dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Status : "
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_sp15"
+            android:layout_alignLeft="@+id/img_vehical" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_car_model"
+            android:layout_marginRight="@dimen/margin_dp5"
+            android:layout_toRightOf="@+id/status"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Pending"
+            android:textColor="@color/colorGreenText"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/tv_status"
+            android:layout_marginTop="@dimen/margin_dp15"
+            android:background="@color/colorBlack" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.vehiclent.R;
-import com.vehiclent.mainActivity.bottomFragments.ProfileFragment;
 import com.vehiclent.mainActivity.bottomFragments.SettingsFragment;
 
 

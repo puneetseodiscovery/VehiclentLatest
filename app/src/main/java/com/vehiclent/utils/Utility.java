@@ -12,10 +12,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.vehiclent.R;
-import com.vehiclent.base.MyApp;
-import com.vehiclent.signupActivity.SignUpActivity;
-
-import java.io.IOException;
 
 public class Utility {
 
@@ -23,8 +19,10 @@ public class Utility {
 
 
     public static boolean isNetworkConnected(Context context) {
+
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
+
     }
 
     public static boolean validEmail(String email) {
@@ -77,6 +75,7 @@ public class Utility {
             e.fillInStackTrace();
         }
         progressDialog.setCancelable(false);
+
         progressDialog.show();
         progressDialog.setContentView(R.layout.layout_progress);
         return progressDialog;

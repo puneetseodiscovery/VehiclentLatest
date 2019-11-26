@@ -50,10 +50,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/img_userprofile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/margin_dp150"
+                        android:layout_height="@dimen/margin_dp150"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/margin_dp25"
                         android:src="@drawable/user_profile" />
@@ -65,7 +65,7 @@
                         android:layout_below="@+id/img_userprofile"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/margin_dp8"
-                        android:text="RICHARD A"
+                        android:text=""
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/textsize_sp22" />
 
@@ -78,7 +78,7 @@
                         android:numStars="5"
                         android:scaleX="0.7"
                         android:scaleY="0.7"
-                        android:stepSize="1.0"
+                        android:stepSize="1"
                         android:theme="@style/RatingBar" />
 
 

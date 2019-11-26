@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mainActivity.bottomFragments.CategoriesFragment">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +22,8 @@
                 android:text="@string/categories"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textsize_sp22" />
+
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -39,5 +40,11 @@
             </android.support.v7.widget.RecyclerView>
         </RelativeLayout>
     </RelativeLayout>
-
+    <ImageView
+        android:id="@+id/no_record_found"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_record_found"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

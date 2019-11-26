@@ -12,12 +12,15 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
+import com.crashlytics.android.Crashlytics;
 import com.vehiclent.R;
 import com.vehiclent.mainActivity.ContainersForFragments.CategoryContainer;
 import com.vehiclent.mainActivity.ContainersForFragments.Container_for_tabs;
 import com.vehiclent.mainActivity.ContainersForFragments.PostJobsContainer;
 import com.vehiclent.mainActivity.ContainersForFragments.ProfileContainer;
 import com.vehiclent.mainActivity.ContainersForFragments.SettingsContainer;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         settingtabhost();

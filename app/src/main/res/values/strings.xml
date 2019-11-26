@@ -1,13 +1,29 @@
 <resources>
+
     <string name="app_name">VehiclentUser</string>
     <string name="welcome_to_vehiclent">Welcome To Vehiclent</string>
+    <!--<string name="map_api_key">AIzaSyAWM_J8fQk4risd3gcjeQng0UzB-kHaHGc</string>
+    <string name="map_api_key2">AIzaSyDn1XM2eGQyUNmhEIX1k_pKOhhHlTc0z2s</string>-->
+    <string name="map_api2">AIzaSyDKpkPtlJLZC0KR-p-cvb4QXG_5JtXFL40</string>
+    <string name="facebook_app_id">2380794048648045</string>
+    <string name="fb_login_protocol_scheme">fb2380794048648045</string>
 
 
+    <!--String TAG ="mainActivity", txnid ="40124012", amount ="", phone ="9816255767",
+    prodname ="Android Payment", firstname ="", email ="puneetsharmabd@gmail.com",
+    merchantId ="6720730", merchantkey="s1mSSokb";  //   first test key only-->
+
+    <!--app keystore
+    Path :  D:\App Publish KeyStore\KeyStoreUser\VehiclentUser.jks
+    Password : VehiclentUser-->
     <string name="notification_text">Tracking, tap to cancel</string>
     <string name="transport_id" translatable="false">4012</string>
     <string name="firebase_path" translatable="false">locations</string>
-    <string name="firebase_email" translatable="false">neha123@gmail.com</string>
+    <string name="firebase_email" translatable="false">mohit4012@gmail.com</string>
     <string name="firebase_password" translatable="false">123456</string>
+
+    <string name="gps_disable">GPS is disabled in your device. Please turn on location of your device</string>
+    <string name="turn_on">Turn on</string>
 
     <string name="login">LOGIN</string>
     <string name="sign_in">SIGN IN</string>
@@ -57,7 +73,7 @@
     <string name="job_dete">Job Date :-</string>
     <string name="service">Service :-</string>
     <string name="congratulations">Congratulations !</string>
-    <string name="cong_sucessful">Your Order Has Successfully Done</string>
+    <string name="cong_sucessful">Your Rating Has Successfully Submitted</string>
     <string name="reviews">Reviews</string>
     <string name="thankyou">Thank you for your payment. we have emailed an invoice of this transaction to the registered email address.</string>
     <string name="successful">Your Payment has successful.</string>
@@ -73,5 +89,14 @@
     <string name="done">Done</string>
     <string name="permission">Please first turn on permission</string>
     <string name="title_activity_tracker_maps">Map</string>
+    <string name="check_network_connection">Please check your Network connection</string>
+    <string name="title_activity_maps_tracker">Map</string>
+
+    <string-array name="text">
+        <item>Mesage sending to service provider</item>
+        <item>Please Wait..</item>
+    </string-array>
+    <string name="title_activity_dummy">dummy</string>
+    <string name="on_going">On Going</string>
 
 </resources>

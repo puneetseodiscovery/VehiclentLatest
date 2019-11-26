@@ -45,7 +45,7 @@ public class SignInActivity extends BaseClass  {
 
     ProgressDialog progressDialog;
     int treatmentActivity;
-    /*Code commeted testing */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

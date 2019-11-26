@@ -62,14 +62,15 @@
 
                     <TextView
                         android:id="@+id/tv_ordersucessfully"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_congratulations"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/margin_dp25"
+                        android:gravity="center"
                         android:text="@string/cong_sucessful"
                         android:textColor="@color/colorBlack"
-                        android:textSize="@dimen/textsize_sp20" />
+                        android:textSize="@dimen/textsize_sp18" />
 
 
 

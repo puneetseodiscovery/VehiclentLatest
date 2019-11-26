@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_layout"
+    tools:context=".contactusActivity.ContactsUsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_contactsus"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorGreenButton">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Contact Us"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_sp22" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_arrow_w" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_contactsus">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/img_applogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:src="@drawable/new_logo" />
+
+                    <EditText
+                        android:id="@+id/et_useremail"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/img_applogo"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp60"
+                        android:layout_marginRight="@dimen/margin_dp25"
+                        android:background="@drawable/contacts_us_bg"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/margin_dp10"
+                        android:paddingRight="@dimen/margin_dp10"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/edit_sendmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp220"
+                        android:layout_below="@+id/et_useremail"
+                        android:layout_marginLeft="@dimen/margin_dp25"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:layout_marginRight="@dimen/margin_dp25"
+                        android:background="@drawable/contacts_us_bg"
+                        android:gravity="start"
+                        android:hint="Write your problem here"
+                        android:inputType="textMultiLine"
+                        android:maxLines="50"
+                        android:paddingLeft="@dimen/padding_dp10"
+                        android:paddingTop="@dimen/margin_dp12"
+                        android:paddingRight="@dimen/padding_dp10"
+                        android:paddingBottom="@dimen/padding_dp12"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/margin_dp16" />
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_dp45"
+                        android:layout_below="@+id/edit_sendmail"
+                        android:layout_alignLeft="@+id/edit_sendmail"
+                        android:layout_alignRight="@+id/edit_sendmail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:layout_marginBottom="@dimen/margin_dp25"
+                        android:background="@drawable/custom_details"
+                        android:text="@string/submit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textsize_sp18" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

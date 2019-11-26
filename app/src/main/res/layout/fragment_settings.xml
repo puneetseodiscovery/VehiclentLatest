@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -34,8 +35,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -87,9 +87,10 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/relative_notification"
+                        android:id="@+id/relative_on_going"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:layout_below="@+id/relative_aboutus">
 
                         <ImageView
@@ -102,14 +103,14 @@
                             android:src="@drawable/bell" />
 
                         <TextView
-                            android:id="@+id/tv_notivation"
+                            android:id="@+id/tv_on_going"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/margin_dp60"
                             android:layout_toRightOf="@+id/img_noti"
                             android:padding="@dimen/padding_dp8"
-                            android:text="@string/notification"
+                            android:text="@string/on_going"
                             android:textColor="@color/colorBlack"
                             android:textSize="@dimen/textsize_sp18" />
 
@@ -122,7 +123,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -138,7 +139,7 @@
                         android:layout_width="match_parent"
 
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_notification">
+                        android:layout_below="@+id/relative_on_going">
 
                         <ImageView
                             android:id="@+id/img_contact"
@@ -171,7 +172,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -186,7 +187,8 @@
                         android:id="@+id/relative_howitwork"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_contactus">
+                        android:layout_below="@+id/relative_contactus"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/img_howitwork"
@@ -218,7 +220,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -228,12 +230,12 @@
                             android:background="@color/colorBlack" />
                     </RelativeLayout>
 
-
                     <RelativeLayout
                         android:id="@+id/relative_payments"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_howitwork">
+                        android:layout_below="@+id/relative_howitwork"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/img_payment"
@@ -265,7 +267,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -311,7 +313,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"
@@ -357,7 +359,7 @@
                             android:layout_marginLeft="@dimen/margin_dp15"
                             android:layout_marginRight="@dimen/margin_dp10"
                             android:padding="@dimen/padding_dp8"
-                            android:src="@drawable/arrow_next" />
+                            app:srcCompat="@drawable/arrow_next" />
 
                         <View
                             android:layout_width="match_parent"

@@ -26,9 +26,9 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_below="@+id/relative_categories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@+id/relative_categories"
             android:background="@drawable/weel_bg">
 
             <android.support.v7.widget.RecyclerView
@@ -39,4 +39,12 @@
             </android.support.v7.widget.RecyclerView>
         </RelativeLayout>
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nodata_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img_nodata"
+        android:visibility="gone" />
 </RelativeLayout>

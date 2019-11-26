@@ -1,5 +1,6 @@
 package com.vehiclent.startPayment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import com.payumoney.core.PayUmoneySdkInitializer;
 import com.payumoney.core.entity.TransactionResponse;
 import com.payumoney.sdkui.ui.utils.PayUmoneyFlowManager;
 import com.vehiclent.R;
+import com.vehiclent.paymnetSuccessful.PaymentSuccessfulActivity;
+import com.vehiclent.utils.Utility;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,27 +24,35 @@ public class StartPaymentActivity extends AppCompatActivity {
     //declare paymentParam object
     PayUmoneySdkInitializer.PaymentParam paymentParam = null;
 
-    String TAG ="mainActivity", txnid ="40124012", amount ="", phone ="",
-            prodname ="Android Payment", firstname ="Puneet Sharma", email ="puneetsharmabd@gmail.com",
-            merchantId ="6720730", merchantkey="s1mSSokb";  //   first test key only
+    String TAG ="mainActivity", txnid ="40124012", amount ="", phone ="9582344406",
+            prodname ="Android Payment", firstname ="", email ="ashish.chauhan000@gmail.com",
+            merchantId ="6755303", merchantkey="lhzvqIFT";
 
-
-   /* String TAG ="mainActivity", txnid ="401204012", amount ="1", phone ="9816255767",
-            prodname ="Android Payment", firstname ="Mohit", email ="mohit.k55seo@gmail.com",
-            merchantId ="6720730", merchantkey="s1mSSokb";  //   first test key only
-*/
-
-
+    String jobid = "",partner_id="",your_profile="", amount____ = "", user_name = "", phone_number = "",email___="";
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startpayment);
 
+        context=StartPaymentActivity.this;
         Intent intent = getIntent();
-        phone = intent.getExtras().getString("phone");
-        amount = intent.getExtras().getString("amount");
+       /* phone = intent.getExtras().getString("phone");*/
+        amount = intent.getExtras().getString("service_price");
+        firstname = intent.getExtras().getString("user_name");
+        jobid = intent.getExtras().getString("jobid");
+        partner_id = intent.getExtras().getString("partner_id");
+        your_profile = intent.getExtras().getString("your_profile");
 
-        startpay();
+        if (Utility.isNetworkConnected(context)) {
+
+            startpay();
+
+        } else {
+            Toast.makeText(StartPaymentActivity.this, "Check your internet connection.", Toast.LENGTH_SHORT).show();
+
+        }
+
     }
 
     public void startpay(){
@@ -128,6 +139,14 @@ public class StartPaymentActivity extends AppCompatActivity {
 
                 if(transactionResponse.getTransactionStatus().equals( TransactionResponse.TransactionStatus.SUCCESSFUL )){
                     //Success Transaction
+
+                    Intent intent=new Intent(StartPaymentActivity.this, PaymentSuccessfulActivity.class);
+                    intent.putExtra("jobid",jobid);
+                    intent.putExtra("amount",amount);
+                    intent.putExtra("firstname",firstname);
+                    intent.putExtra("partner_id",partner_id);
+                    intent.putExtra("your_profile",your_profile);
+                    startActivity(intent);
                 } else{
                     //Failure Transaction
                 }
@@ -145,6 +164,4 @@ public class StartPaymentActivity extends AppCompatActivity {
             }*/
         }
     }
-
-
 }

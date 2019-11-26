@@ -1,21 +1,20 @@
 package com.vehiclent.congratulationsActivity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.vehiclent.R;
+import com.vehiclent.base.BaseClass;
 import com.vehiclent.mainActivity.HomeActivity;
 import com.vehiclent.utils.Utility;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CongratulationActivity extends AppCompatActivity implements View.OnClickListener {
+public class CongratulationActivity extends BaseClass implements View.OnClickListener {
 
     @BindView(R.id.tv_congo)
     TextView tv_congo;
